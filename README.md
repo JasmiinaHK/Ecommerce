@@ -1,25 +1,23 @@
-My E-commerce Product
-About the Project
-A simple e-commerce application built using the Laravel framework. It allows product browsing, user registration, and purchasing.
+# My E-commerce Product
 
-Features
-View all products
+## About the Project
 
-Product categories
+A simple and functional e-commerce application built using the Laravel framework.  
+It allows users to browse products, register, manage their accounts, and make purchases.
 
-Search and filtering
+## Features
 
-User account management
+- View all products  
+- Product categories  
+- Search and filtering  
+- User account management  
+- Shopping cart  
+- Admin panel  
 
-Shopping cart
+## Technologies Used
 
-Admin panel
+- Laravel 10  
+- MySQL  
+- Bootstrap 5  
+- PHP 8.1+
 
-Technologies
-Laravel 10
-
-MySQL
-
-Bootstrap 5
-
-PHP 8.1+
