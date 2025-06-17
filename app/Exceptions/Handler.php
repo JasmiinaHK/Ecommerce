@@ -44,7 +44,41 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            // Log all exceptions
+            \Log::error('Exception: ' . $e->getMessage(), [
+                'exception' => $e,
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString()
+            ]);
+        });
+
+        // Handle specific error: Attempt to read property 'id' on null
+        $this->renderable(function (\ErrorException $e, $request) {
+            if (str_contains($e->getMessage(), 'Attempt to read property "id" on null')) {
+                \Log::error('Null ID access detected', [
+                    'message' => $e->getMessage(),
+                    'file' => $e->getFile(),
+                    'line' => $e->getLine(),
+                    'url' => $request->fullUrl(),
+                    'user' => auth()->check() ? auth()->id() : 'guest',
+                    'input' => $request->all()
+                ]);
+
+                // Return a more user-friendly error page
+                if ($request->expectsJson()) {
+                    return response()->json([
+                        'message' => 'An error occurred while processing your request.',
+                        'error' => 'Invalid data reference'
+                    ], 500);
+                }
+
+                return redirect()->back()->withErrors([
+                    'error' => 'An error occurred. Please try again.'
+                ]);
+            }
+            
+            return null; // Let Laravel handle other errors
         });
     }
 }

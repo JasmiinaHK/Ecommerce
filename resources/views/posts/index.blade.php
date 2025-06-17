@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Blog's
         </h2>
     </x-slot>
@@ -33,9 +33,9 @@
     </form>
 @endif
 
-            <div class="bg-white dark:bg-gray-800 shadow p-6 rounded-lg mb-6">
+            <div class="bg-white shadow p-6 rounded-lg mb-6">
                 <h2 class="text-2xl font-semibold mb-2">{{ $post->title }}</h2>
-                <p class="text-gray-700 dark:text-gray-300">{{ Str::limit($post->content, 150) }}</p>
+                <p class="text-gray-700">{{ Str::limit($post->content, 150) }}</p>
                 <p class="text-sm text-gray-500 mt-2">Autor: {{ $post->user->name }}</p>
             </div>
         @endforeach
