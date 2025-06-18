@@ -2,7 +2,7 @@
 
 ## About the Project
 
-A simple and functional e-commerce application built using the Laravel framework.  
+A simple and functional e-commerce application built using the Laravel framework..  
 It allows users to browse products, register, manage their accounts, and make purchases.
 
 ## Features
