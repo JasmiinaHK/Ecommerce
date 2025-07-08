@@ -19,7 +19,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function dashboard(): View
+    public function index(): View
     {
         // Basic statistics
         $stats = [

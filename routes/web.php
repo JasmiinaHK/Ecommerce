@@ -23,11 +23,6 @@ use Illuminate\Support\Facades\Route;
 // Public routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Dashboard Route
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 // Authentication Routes
 require __DIR__.'/auth.php';
 

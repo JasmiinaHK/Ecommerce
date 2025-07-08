@@ -17,11 +17,10 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $categories = [
-            ['name' => 'Elektronika', 'description' => 'Pametni telefoni, laptopovi, tablet računari i ostala elektronika'],
-            ['name' => 'Kućni aparati', 'description' => 'Bela tehnika i mali kućni aparati'],
-            ['name' => 'Moda', 'description' => 'Odjeća, obuća i modni dodaci'],
-            ['name' => 'Lijekovi i kozmetika', 'description' => 'Lijekovi, kozmetika i njega lica i tijela'],
-            ['name' => 'Sportska oprema', 'description' => 'Oprema za razne sportske aktivnosti'],
+            ['name' => 'Electronics', 'description' => 'Smartphones, laptops, tablets and other electronics'],
+            ['name' => 'Home Appliances', 'description' => 'Home appliances and white goods'],
+            ['name' => 'Smart Watches', 'description' => 'Smart watches and wearables'],
+            ['name' => 'TV & Audio', 'description' => 'Televisions and audio equipment']
         ];
 
         foreach ($categories as $category) {

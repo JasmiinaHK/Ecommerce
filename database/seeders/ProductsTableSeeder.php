@@ -26,56 +26,46 @@ class ProductsTableSeeder extends Seeder
 
         $products = [
             [
-                'name' => 'Pametni telefon Samsung Galaxy S21',
-                'description' => 'Najnoviji pametni telefon sa najboljim performansama.',
+                'name' => 'Samsung Galaxy S23',
+                'description' => 'Latest Samsung smartphone with top performance and advanced camera system.',
                 'price' => 999.99,
                 'sale_price' => 899.99,
                 'quantity' => 50,
-                'sku' => 'SAMSUNG-S21-001',
+                'sku' => 'SAMSUNG-S23-256GB',
                 'is_featured' => true,
                 'is_active' => true,
-                'category_id' => $categoryIds[0] // Elektronika
+                'category_id' => $categoryIds[0] // Electronics
             ],
             [
-                'name' => 'LG Smart TV 55" 4K',
-                'description' => 'Pametni TV sa 4K rezolucijom i smart funkcijama.',
-                'price' => 1299.99,
+                'name' => 'LG OLED C3 55" 4K Smart TV',
+                'description' => 'Stunning 4K OLED TV with smart features and perfect blacks.',
+                'price' => 1499.99,
+                'quantity' => 20,
+                'sku' => 'LG-OLED-C3-55',
+                'is_featured' => true,
+                'is_active' => true,
+                'category_id' => $categoryIds[3] // TV & Audio
+            ],
+            [
+                'name' => 'Samsung EcoBubble Washing Machine 8kg',
+                'description' => 'Energy efficient washing machine with EcoBubble technology.',
+                'price' => 699.99,
+                'quantity' => 15,
+                'sku' => 'SAMSUNG-WW80T554DAX',
+                'is_featured' => true,
+                'is_active' => true,
+                'category_id' => $categoryIds[1] // Home Appliances
+            ],
+            [
+                'name' => 'Samsung Galaxy Watch 5',
+                'description' => 'Advanced smartwatch with health monitoring and fitness tracking.',
+                'price' => 299.99,
+                'sale_price' => 249.99,
                 'quantity' => 30,
-                'sku' => 'LG-TV-55-4K',
+                'sku' => 'SAMSUNG-GW5-44MM',
                 'is_featured' => true,
                 'is_active' => true,
-                'category_id' => $categoryIds[0] // Elektronika
-            ],
-            [
-                'name' => 'Mašina za veš Beko 8kg',
-                'description' => 'Mašina za veš sa 8kg kapaciteta i energetskom efikasnošću A+++',
-                'price' => 599.99,
-                'quantity' => 25,
-                'sku' => 'BEKO-WM-8KG',
-                'is_featured' => false,
-                'is_active' => true,
-                'category_id' => $categoryIds[1] // Kućni aparati
-            ],
-            [
-                'name' => 'Patike Nike Air Max',
-                'description' => 'Sportske patike za udobnost tokom čitavog dana.',
-                'price' => 129.99,
-                'sale_price' => 99.99,
-                'quantity' => 100,
-                'sku' => 'NIKE-AIR-MAX-42',
-                'is_featured' => true,
-                'is_active' => true,
-                'category_id' => $categoryIds[4] // Sportska oprema
-            ],
-            [
-                'name' => 'Krema za lice Nivea Q10',
-                'description' => 'Njegujuća krema za lice sa koenzimom Q10.',
-                'price' => 14.99,
-                'quantity' => 200,
-                'sku' => 'NIVEA-Q10-50ML',
-                'is_featured' => false,
-                'is_active' => true,
-                'category_id' => $categoryIds[3] // Lijekovi i kozmetika
+                'category_id' => $categoryIds[2] // Smart Watches
             ]
         ];
 
